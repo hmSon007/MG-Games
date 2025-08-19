@@ -18,6 +18,26 @@
             user-select: none;
             text-align: center;
         }
+        /* Neon parıltı efekti */
+        .neon-glow {
+            box-shadow: 0 0 5px #059669, 0 0 10px #059669, 0 0 15px #059669;
+        }
+
+        /* Neon yazı efekti */
+        .neon-text {
+            text-shadow: 0 0 5px #10b981, 0 0 10px #10b981;
+        }
+        /* Kaydırma çubuğu için stil */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #10b981;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #059669;
+        }
 
         .game-container {
             position: relative;
@@ -28,8 +48,8 @@
             overflow: hidden;
             touch-action: none;
         }
-
-        canvas {
+        
+        #gameCanvas {
             display: block;
             background-color: #222;
         }
@@ -91,18 +111,25 @@
         }
         
         #back-button {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background-color: rgba(255, 255, 255, 0.2);
+            /* Varsayılan olarak soluk renk ve parıltı yok */
+            background-color: rgba(5, 150, 105, 0.4); 
             border: none;
             color: white;
             padding: 10px 15px;
             font-size: 14px;
             cursor: pointer;
             border-radius: 5px;
+            margin-bottom: 10px;
             z-index: 5;
-            display: none; /* Initially hidden */
+            display: none;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #back-button:hover,
+        #back-button:focus {
+            /* Üzerine gelindiğinde parlak renk ve parıltı ekle */
+            background-color: #059669;
+            box-shadow: 0 0 5px #059669, 0 0 10px #059669, 0 0 15px #059669;
         }
         
         @media (max-width: 600px) {
@@ -130,15 +157,15 @@
     </style>
 </head>
 <body>
-    <div class="game-container">
+    <button id="back-button">Geri Dön</button>
+    <div class="game-container neon-glow">
         <canvas id="gameCanvas"></canvas>
-        <div id="score-display">0</div>
+        <div id="score-display" class="neon-text">0</div>
         <div id="message-box">
-            <h2 id="message-title">Hazır!</h2>
-            <p id="message-text">Başlamak için fareyi hareket ettir veya dokun.</p>
+            <h2 id="message-title" class="neon-text">Hazır!</h2>
+            <p id="message-text" class="neon-text">Başlamak için fareyi hareket ettir veya dokun.</p>
             <button id="restart-button" style="display: none;">Yeniden Başla</button>
         </div>
-        <button id="back-button">Geri Dön</button>
     </div>
 
     <script>
