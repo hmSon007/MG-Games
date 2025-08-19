@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MG Games - MG Studio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Inter fontunu tüm sayfaya uygula */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Koyu gri-mavi arka plan */
+        }
+        /* Neon parlama efekti için özel class */
+        .neon-glow {
+            box-shadow: 0 0 5px #059669, 0 0 10px #059669, 0 0 15px #059669;
+        }
+        .neon-text {
+            text-shadow: 0 0 5px #10b981, 0 0 10px #10b981;
+        }
+        /* Scrollbar stil ayarları */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #10b981;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #059669;
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <!-- Header / Navigasyon -->
+    <header class="bg-gray-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b border-gray-700/50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#anasayfa" class="text-3xl font-bold tracking-wider text-white">
+                <span class="text-emerald-400">MG</span>GAMES
+            </a>
+            <!-- Mobil Menü Butonu -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-emerald-400 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+            <!-- Navigasyon Linkleri -->
+            <nav id="nav-menu" class="hidden md:flex items-center space-x-8">
+                <a href="#anasayfa" class="hover:text-emerald-400 transition duration-300">Anasayfa</a>
+                <a href="#oyunlar" class="hover:text-emerald-400 transition duration-300">Oyunlar</a>
+                <a href="#hakkimizda" class="hover:text-emerald-400 transition duration-300">Hakkımızda</a>
+                <a href="#iletisim" class="hover:text-emerald-400 transition duration-300">İletişim</a>
+            </nav>
+        </div>
+        <!-- Mobil Menü -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900">
+            <a href="#anasayfa" class="block py-2 px-6 text-sm hover:bg-gray-800 hover:text-emerald-400">Anasayfa</a>
+            <a href="#oyunlar" class="block py-2 px-6 text-sm hover:bg-gray-800 hover:text-emerald-400">Oyunlar</a>
+            <a href="#hakkimizda" class="block py-2 px-6 text-sm hover:bg-gray-800 hover:text-emerald-400">Hakkımızda</a>
+            <a href="#iletisim" class="block py-2 px-6 text-sm hover:bg-gray-800 hover:text-emerald-400">İletişim</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Anasayfa (Hero) Bölümü -->
+        <section id="anasayfa" class="min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 1)), url('https://placehold.co/1920x1080/111827/10b981?text=Oyun+Arka+Plan%C4%B1');">
+            <div class="text-center px-4">
+                <h1 class="text-5xl md:text-7xl font-black uppercase neon-text tracking-widest">MG Studio</h1>
+                <p class="mt-4 text-lg md:text-2xl text-gray-300">Hayal Gücünün Piksellerle Buluştuğu Yer</p>
+                <a href="#oyunlar" class="mt-8 inline-block bg-emerald-500 text-white font-bold py-3 px-8 rounded-lg text-lg uppercase hover:bg-emerald-600 transition-transform transform hover:scale-105 duration-300 neon-glow">
+                    Oyunları Keşfet
+                </a>
+            </div>
+        </section>
+
+        <!-- Oyunlar Bölümü -->
+        <section id="oyunlar" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 uppercase tracking-wider">Oyunlarımız</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    
+                    <!-- Oyun Kartı 1: MG Wordkart -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 group">
+                        <img src="https://hmson007.github.io/MG-Wordkart/images/logo.png" alt="MG Wordkart" class="w-full h-56 object-contain p-4 bg-gray-700" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1f2937/ffffff?text=MG+Wordkart';">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-emerald-400">MG Wordkart</h3>
+                            <p class="text-gray-400 mb-4">Kelime bilginizi test edin ve en yüksek skoru yapın! Hızlı düşün, doğru tahmin et.</p>
+                            <a href="https://hmson007.github.io/MG-Wordkart/" target="_blank" class="inline-block bg-gray-700 text-white py-2 px-5 rounded-md hover:bg-emerald-500 transition duration-300">
+                                Hemen Oyna
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Oyun Kartı 2: Uzay Macerası (Placeholder) -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 group">
+                        <img src="https://placehold.co/600x400/1f2937/ffffff?text=Uzay+Maceras%C4%B1" alt="Uzay Macerası" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-emerald-400">Uzay Macerası</h3>
+                            <p class="text-gray-400 mb-4">Galaksinin derinliklerinde tehlikeli düşmanlarla savaşın ve evreni kurtarın.</p>
+                            <a href="#" class="inline-block bg-gray-700 text-white py-2 px-5 rounded-md hover:bg-emerald-500 transition duration-300">
+                                Çok Yakında
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Oyun Kartı 3: Bulmaca Dünyası (Placeholder) -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 group">
+                        <img src="https://placehold.co/600x400/1f2937/ffffff?text=Bulmaca+D%C3%BCnyas%C4%B1" alt="Bulmaca Dünyası" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-emerald-400">Bulmaca Dünyası</h3>
+                            <p class="text-gray-400 mb-4">Zekanızı zorlayacak yüzlerce bulmaca ile keyifli ve öğretici bir deneyim sizi bekliyor.</p>
+                            <a href="#" class="inline-block bg-gray-700 text-white py-2 px-5 rounded-md hover:bg-emerald-500 transition duration-300">
+                                Çok Yakında
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Hakkımızda Bölümü (Artık ayrı bir sayfa gibi davranacak) -->
+        <section id="hakkimizda" class="py-20 min-h-screen flex items-center hidden">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-6 uppercase tracking-wider">Biz Kimiz?</h2>
+                <div class="max-w-3xl mx-auto">
+                    <p class="text-lg text-gray-400 leading-relaxed">
+                        MG Studio olarak, tutkuyla oyun geliştiren bağımsız bir ekibiz. Amacımız, her yaştan oyuncu için eğlenceli, yenilikçi ve unutulmaz deneyimler yaratmaktır. Kod satırlarından piksellere, her ayrıntıda kaliteyi ve yaratıcılığı ön planda tutuyoruz. Bizi takip etmeye devam edin!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- İletişim Bölümü (Artık ayrı bir sayfa gibi davranacak) -->
+        <section id="iletisim" class="py-20 bg-gray-900 min-h-screen flex items-center hidden">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-6 uppercase tracking-wider">Bize Ulaşın</h2>
+                <p class="text-lg text-gray-400 mb-8">
+                    Proje fikirleriniz, iş birlikleri veya sadece bir merhaba demek için bizimle iletişime geçmekten çekinmeyin.
+                </p>
+                <a href="mailto:iletisim@mgstudio.com" class="bg-emerald-500 text-white font-bold py-3 px-8 rounded-lg text-lg uppercase hover:bg-emerald-600 transition-transform transform hover:scale-105 duration-300 neon-glow">
+                    E-posta Gönder
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-6">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2024 MG Studio. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobil Menü Mantığı ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // --- Çoklu Sayfa Simülasyonu İçin Sayfa Değiştirme Mantığı ---
+            const sections = {
+                anasayfa: document.getElementById('anasayfa'),
+                oyunlar: document.getElementById('oyunlar'),
+                hakkimizda: document.getElementById('hakkimizda'),
+                iletisim: document.getElementById('iletisim')
+            };
+
+            // Sayfa içi # ile başlayan tüm linkleri seç
+            const allNavLinks = document.querySelectorAll('a[href^="#"]');
+
+            const navigateTo = (pageId) => {
+                // Eğer açıksa mobil menüyü kapat
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+
+                // Navigasyon mantığı
+                if (pageId === 'hakkimizda' || pageId === 'iletisim') {
+                    // "Tek sayfa" görünümü. Ana içeriği gizle.
+                    sections.anasayfa.classList.add('hidden');
+                    sections.oyunlar.classList.add('hidden');
+                    
+                    if (pageId === 'hakkimizda') {
+                        sections.hakkimizda.classList.remove('hidden');
+                        sections.iletisim.classList.add('hidden');
+                    } else { // pageId 'iletisim' olmalı
+                        sections.hakkimizda.classList.add('hidden');
+                        sections.iletisim.classList.remove('hidden');
+                    }
+                    // Sayfa benzeri bir deneyim için en üste kaydır
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    // "Ana sayfa" görünümü. Ana içeriği göster.
+                    sections.anasayfa.classList.remove('hidden');
+                    sections.oyunlar.classList.remove('hidden');
+                    sections.hakkimizda.classList.add('hidden');
+                    sections.iletisim.classList.add('hidden');
+
+                    // İlgili bölüme (anasayfa veya oyunlar) yumuşak bir şekilde kaydır
+                    const targetElement = document.getElementById(pageId);
+                    if (targetElement) {
+                       targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            };
+
+            allNavLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    const href = link.getAttribute('href');
+                    // Linkin sayfa içi bir link olduğundan emin ol
+                    if (href.startsWith('#')) {
+                        e.preventDefault(); // Varsayılan atlama davranışını engelle
+                        const pageId = href.substring(1);
+                        navigateTo(pageId);
+                    }
+                });
+            });
+
+            // Başlangıçta navigateTo fonksiyonunu çağırmaya gerek yok çünkü
+            // HTML'in varsayılan durumu zaten doğru (anasayfa ve oyunlar görünüyor).
+        });
+    </script>
+
+</body>
+</html>
